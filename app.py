@@ -48,6 +48,11 @@ st.markdown("---")
 
 uploaded_file = st.file_uploader("📂 Sube el archivo Excel (.xls o .xlsx)", type=["xls", "xlsx"])
 
+
+# --- MARCA DE AGUA (FOOTER) ---
+st.markdown("---")
+st.caption("Desarrollado por: Andrey y Ing. Faiver Adrian Abril")
+
 if uploaded_file:
     try:
         df_raw = pd.read_excel(uploaded_file, header=None)
